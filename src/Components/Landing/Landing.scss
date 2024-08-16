@@ -1,0 +1,46 @@
+.landing__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 74rem;
+}
+
+.landing__headline {
+  font-weight: var(--font-extra-bold);
+  font-size: 50px;
+  text-align: center;
+  margin-top: 4rem;
+
+  & .emphasized {
+    color: var(--primary);
+  }
+}
+
+.landing__description {
+  font-size: var(--text-xl);
+  text-align: center;
+}
+
+.get-started {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: var(--primary);
+  border: unset;
+  border-radius: 6px;
+  height: 55px;
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.get-started:hover {
+    transform: scale(1.1);
+}
