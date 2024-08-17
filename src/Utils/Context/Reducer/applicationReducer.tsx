@@ -10,6 +10,7 @@ export const initialStore = {
     days: 0,
     budget: 0,
     pax: 0,
+    currency: '',
   },
   geminiGenerativeResult: null,
   auth: {},

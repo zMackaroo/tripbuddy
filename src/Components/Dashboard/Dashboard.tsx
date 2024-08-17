@@ -19,6 +19,7 @@ import {
   GooglePlaceAPIKey,
   travelGroupOptions,
   GEMINI_PROMPT,
+  supportedCurrency,
 } from '@Utils/Constant';
 
 import './Dashboard.scss';
@@ -77,6 +78,7 @@ function Dashboard() {
       .replace('{days}', geminiParamsConfig.days)
       .replace('{pax}', geminiParamsConfig.pax)
       .replace('{budget}', geminiParamsConfig.budget)
+      .replace('{currency}', geminiParamsConfig.currency)
       .replace('{days}', geminiParamsConfig.days);
 
     await chatSession.sendMessage(transformedPrompt).then(({ response }) => {
@@ -133,6 +135,28 @@ function Dashboard() {
                 })
               }
             />
+          </div>
+          <div className="form__input-group">
+            <h2>What is your currency?</h2>
+            <select
+              title="currency"
+              name="currency"
+              className="form__input-type-number"
+              onChange={(e) =>
+                updateStore({
+                  geminiParamsConfig: {
+                    ...geminiParamsConfig,
+                    currency: e.target.value,
+                  },
+                })
+              }
+            >
+              <option value="Dollar">$ - Dollar</option>
+              <option value="Peso">₱ - Peso</option>
+              <option value="Yen">¥ - Yen</option>
+              <option value="Won">₩ - Won</option>
+              <option value="Baht">฿ - Baht</option>
+            </select>
           </div>
           <div className="form__input-group">
             <h2>How much is your budget?</h2>
@@ -218,7 +242,8 @@ function Dashboard() {
                   📅 {geminiParamsConfig.days} day(s)
                 </div>
                 <div className="details__container">
-                  💰 {geminiParamsConfig.budget.toLocaleString()} budget
+                  💰 {supportedCurrency[geminiParamsConfig.currency]}
+                  {geminiParamsConfig.budget.toLocaleString()} budget
                 </div>
                 <div className="details__container">
                   🥂 No. Of Traveler: {geminiParamsConfig.pax}

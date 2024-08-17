@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { lazy } from 'react';
 
 const Header = lazy(() => import('../Components/Header/Header'));
@@ -44,6 +45,14 @@ const travelGroupOptions: Array<ITravelGroupOptions> = [
 
 const GEMINI_PROMPT = import.meta.env.VITE_GOOGLE_GEMINI_PROMPT;
 
+const supportedCurrency: any = {
+  'Dollar': '$',
+  'Peso': '₱',
+  'Won': '₩',
+  'Yen': '¥',
+  'Baht': '฿'
+}
+
 export {
   Header,
   Landing,
@@ -53,5 +62,6 @@ export {
   GeminiAPIKey,
   GooglePlaceAPIKey,
   travelGroupOptions,
-  GEMINI_PROMPT
+  GEMINI_PROMPT,
+  supportedCurrency
 };
