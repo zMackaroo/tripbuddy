@@ -223,3 +223,20 @@
   color: var(--primary);
   font-weight: var(--font-bold);
 }
+
+.keypoints__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.275rem;
+}
+
+.scam__schemes__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.425rem;
+}
+
+.scam__schemes {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}

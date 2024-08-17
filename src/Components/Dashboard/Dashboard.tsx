@@ -88,7 +88,7 @@ function Dashboard() {
       showBackDrop(false, true);
     });
   };
-
+  console.log(geminiGenerativeResult);
   return (
     <>
       <Header />
@@ -247,6 +247,20 @@ function Dashboard() {
                 </div>
                 <div className="details__container">
                   🥂 No. Of Traveler: {geminiParamsConfig.pax}
+                </div>
+              </div>
+              <h2>Dress Culture & Potential Scam Schemes</h2>
+              <div className="keypoints__wrapper">
+                <div className="dress__culture">
+                  {geminiGenerativeResult?.dressCulture}
+                </div>
+                <div className="scam__schemes__wrapper">
+                  <h3>Watch out for</h3>
+                  {geminiGenerativeResult?.potentialScamSchemes.map(
+                    (scam: string) => (
+                      <h2 className="scam__schemes">• {scam}</h2>
+                    )
+                  )}
                 </div>
               </div>
               <h2>Hotel Recommendations</h2>
