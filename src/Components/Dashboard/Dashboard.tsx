@@ -229,7 +229,7 @@ function Dashboard() {
                 {geminiGenerativeResult !== null &&
                   geminiGenerativeResult?.hotelOptions?.map(
                     ({ hotelAddress, hotelName, price, rating }: any) => (
-                      <div className="hotel__card">
+                      <div key={hotelName} className="hotel__card">
                         <img
                           title="destination"
                           className="hotel__card-image"
