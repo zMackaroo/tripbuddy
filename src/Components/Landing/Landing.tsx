@@ -23,7 +23,7 @@ function Landing() {
         </p>
         <Link to="/create">
           <button className="get-started" type="button">
-            Get Started It's free
+            Get Started. It's free.
           </button>
         </Link>
         <img title="Landing" loading="lazy" src={LandingImage} />
