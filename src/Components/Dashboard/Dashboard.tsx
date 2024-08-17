@@ -82,10 +82,16 @@ function Dashboard() {
       .replace('{days}', geminiParamsConfig.days);
 
     await chatSession.sendMessage(transformedPrompt).then(({ response }) => {
-      updateStore({
-        geminiGenerativeResult: JSON.parse(response.text()),
-      });
-      showBackDrop(false, true);
+      try {
+        updateStore({
+          geminiGenerativeResult: JSON.parse(response.text()),
+        });
+        showBackDrop(false, true);
+      } catch (er) {
+        alert('Encountered an error with GeminiAI, Please try again....');
+        console.log(er);
+        showBackDrop(false, false);
+      }
     });
   };
   console.log(geminiGenerativeResult);
@@ -308,7 +314,6 @@ function Dashboard() {
                                   geminiGenerativeResult.itinerary[key].morning
                                     .placeName
                                 }{' '}
-                                (Afternoon)
                               </h2>
                               <p>
                                 {
@@ -325,7 +330,7 @@ function Dashboard() {
                               geminiGenerativeResult.itinerary[key].afternoon
                                 .time
                             }{' '}
-                            (Evening)
+                            (Afternoon)
                           </p>
                           <div className="trip__details">
                             <img
@@ -352,6 +357,7 @@ function Dashboard() {
                         <div className="trip__item">
                           <p className="trip__time">
                             {geminiGenerativeResult.itinerary[key].evening.time}
+                            (Evening)
                           </p>
                           <div className="trip__details">
                             <img
