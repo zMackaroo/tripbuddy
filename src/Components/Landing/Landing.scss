@@ -7,6 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 74rem;
+  padding-bottom: 2rem;
 }
 
 .landing__headline {
@@ -14,6 +15,7 @@
   font-size: 50px;
   text-align: center;
   margin-top: 4rem;
+  color: black;
 
   & .emphasized {
     color: var(--primary);
@@ -23,6 +25,7 @@
 .landing__description {
   font-size: var(--text-xl);
   text-align: center;
+  color: black;
 }
 
 .get-started {
@@ -42,5 +45,5 @@
 }
 
 .get-started:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }

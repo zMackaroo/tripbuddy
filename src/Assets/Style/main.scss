@@ -2,8 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
-  color: #fff;
-  background-color: #161719;
+  color: black;
+  background-color: whitesmoke;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,10 @@
   --font-black: 900;
 
   --text-sm: 0.875rem;
+  --text-lg: 1.125rem;
   --text-xl: 1.25rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
 
   // Colors
   --primary: rgb(245 101 81 / 1);
@@ -34,6 +37,11 @@ body {
   margin: 0;
   padding: 0;
   transition: 0.3s;
+  background-image: url('../Images//background.jpg');
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.75);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 p,
@@ -47,17 +55,60 @@ h6 {
   margin: 0;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-img, svg, video, canvas, audio, iframe, embed, object {
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: block;
   vertical-align: middle;
 }
 
 button {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .landing__wrapper, .dashboard__wrapper { 
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+
+  .landing__headline {
+    font-size: 36px !important;
+  }
+
+  .option {
+    width: 100% !important;
+  }
+
+  .fetching-image {
+    width: 75% !important;
+  }
+
+  .itinerary__details {
+    flex-direction: column;
+  }
+
+  .hotel__card, .trip__item {
+    max-width: 100% !important;
+  }
 }

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Link } from 'react-router-dom';
 import { Header } from '@Utils/Constant';
 
 import LandingImage from '../../Assets/Images/landing.png';
@@ -19,9 +21,11 @@ function Landing() {
           Your personal trip planner and travel curator, creating custom
           itineraries tailored to your interests and budget.
         </p>
-        <button className="get-started" type="button">
-          Get Started It's free
-        </button>
+        <Link to="/create">
+          <button className="get-started" type="button">
+            Get Started It's free
+          </button>
+        </Link>
         <img title="Landing" loading="lazy" src={LandingImage} />
       </section>
     </>
