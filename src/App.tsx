@@ -13,7 +13,7 @@ function App() {
             <Routes>
               <Route index element={<Landing />} />
               <Route path="/create" element={<AuthProvider />}>
-                <Route index element={<Dashboard />} />
+                <Route path="/create" element={<Dashboard />} />
               </Route>
             </Routes>
           </BrowserRouter>
