@@ -4,6 +4,7 @@ import { lazy } from 'react';
 const Header = lazy(() => import('../Components/Header/Header'));
 const Landing = lazy(() => import('../Components/Landing/Landing'));
 const Dashboard = lazy(() => import('../Components/Dashboard/Dashboard'));
+const Maintenance = lazy(() => import('../Components/Maintenance/Maintenance'));
 
 import AuthProvider from '../Components/Auth/AuthProvider';
 import SignIn from '../Components/Auth/SignIn';
@@ -11,6 +12,8 @@ import { ITravelGroupOptions } from './Types';
 
 const GeminiAPIKey: string = import.meta.env.VITE_GOOGLE_GEMINI_API_KEY;
 const GooglePlaceAPIKey: string = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
+
+const ApplicationMaintenanceMode: string = import.meta.env.VITE_APPLICATION_MAINTENANCE_MODE;
 
 const travelGroupOptions: Array<ITravelGroupOptions> = [
   {
@@ -57,10 +60,12 @@ export {
   Header,
   Landing,
   Dashboard,
+  Maintenance,
   AuthProvider,
   SignIn,
   GeminiAPIKey,
   GooglePlaceAPIKey,
+  ApplicationMaintenanceMode,
   travelGroupOptions,
   GEMINI_PROMPT,
   supportedCurrency

@@ -86,8 +86,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+i {
+  color: #f65556;
+}
+
 @media screen and (max-width: 768px) {
-  .landing__wrapper, .dashboard__wrapper { 
+  .landing__wrapper,
+  .dashboard__wrapper {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
   }
@@ -108,8 +113,48 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
   }
 
-  .hotel__card, .trip__item {
+  .hotel__card,
+  .trip__item {
     max-width: 100% !important;
     width: 100% !important;
+  }
+
+  .trip__card {
+    flex-direction: column !important;
+
+    & .image, .details {
+      width: 100% !important;
+    }
+  }
+
+  .dress__culture__wrapper {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 596px) {
+  .image,
+  .hotel__card .name-address {
+    width: 100% !important;
+  }
+
+  .hotel__card .name-address {
+    height: 300px !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    gap: 0.575rem !important;
+  }
+
+  .hotel__card {
+    padding: 24px !important;
+  }
+
+  .hotel__card .name-address .description {
+    display: unset !important;
+    text-overflow: unset !important;
+    -webkit-box-orient: unset !important;
+    -webkit-line-clamp: unset !important;
+    overflow: scroll !important;
   }
 }
