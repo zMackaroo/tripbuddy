@@ -83,6 +83,7 @@ function Dashboard() {
       .replace('{currency}', currency)
       .replace('{destination}', destination)
       .replace('{destination}', destination)
+      .replace('{destination}', destination)
       .replace('{currency}', currency);
 
     await chatSession.sendMessage(transformedPrompt).then(({ response }) => {
