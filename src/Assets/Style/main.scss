@@ -90,6 +90,10 @@ i {
   color: #f65556;
 }
 
+option {
+  padding: 25px;
+}
+
 @media screen and (max-width: 768px) {
   .landing__wrapper,
   .dashboard__wrapper {

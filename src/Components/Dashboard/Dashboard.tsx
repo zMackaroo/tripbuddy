@@ -306,7 +306,7 @@ function Dashboard() {
                     ({
                       hotelAddress,
                       hotelName,
-                      descriptions,
+                      description,
                       price,
                       rating,
                     }: any) => (
@@ -332,7 +332,7 @@ function Dashboard() {
                             <i className="fa-solid fa-location-dot" />{' '}
                             {hotelAddress}
                           </p>
-                          <p className="description">{descriptions}</p>
+                          <p className="description">{description}</p>
                         </div>
                       </div>
                     )

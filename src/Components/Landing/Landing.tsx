@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@Utils/Constant';
 
-import LandingImage from '../../Assets/Images/landing.png';
+import LandingImage from '../../Assets/Images/branding.png';
 
 import './Landing.scss';
 
