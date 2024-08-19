@@ -5,3 +5,8 @@ export interface ITravelGroupOptions {
   description: string;
   pax: string;
 }
+
+export interface IItinerary {
+  placeName: string;
+  
+}

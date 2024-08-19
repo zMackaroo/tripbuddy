@@ -348,58 +348,50 @@ function Dashboard() {
                     <div className="trip__wrapper">
                       {geminiGenerativeResult?.itinerary[
                         index
-                      ]?.destinations?.map(
-                        ({
-                          placeName,
-                          placeAddress,
-                          placeDetails,
-                          time,
-                          commuteInstruction,
-                        }): any => (
-                          <div className="trip__card">
-                            <img
-                              title="destination"
-                              className="image"
-                              src={SampleImage}
-                            />
-                            <div className="details">
-                              <h2 className="name">
-                                <span className="time">
-                                  <i className="fa-solid fa-clock" /> {time}
-                                </span>
-                                <span>{placeName}</span>
-                              </h2>
-                              <p>
-                                <i className="fa-solid fa-location-dot" />{' '}
-                                {placeAddress}
-                              </p>
-                              <p>{placeDetails}</p>
-                              <h2>How to get there?</h2>
-                              <div className="commute">
-                                <div className="instruction">
-                                  <i
-                                    className={`${commuteInstruction?.iconClass}`}
-                                  />{' '}
-                                  {commuteInstruction?.mode} from{' '}
-                                  {commuteInstruction?.from}{' '}
-                                  <i className="fa-solid fa-arrow-right" />{' '}
-                                  {commuteInstruction?.to}
+                      ]?.destinations?.map((key: any) => (
+                        <div className="trip__card">
+                          <img
+                            title="destination"
+                            className="image"
+                            src={SampleImage}
+                          />
+                          <div className="details">
+                            <h2 className="name">
+                              <span className="time">
+                                <i className="fa-solid fa-clock" /> {key.time}
+                              </span>
+                              <span>{key.placeName}</span>
+                            </h2>
+                            <p>
+                              <i className="fa-solid fa-location-dot" />{' '}
+                              {key.placeAddress}
+                            </p>
+                            <p>{key.placeDetails}</p>
+                            <h2>How to get there?</h2>
+                            <div className="commute">
+                              <div className="instruction">
+                                <i
+                                  className={`${key.commuteInstruction?.iconClass}`}
+                                />{' '}
+                                {key.commuteInstruction?.mode} from{' '}
+                                {key.commuteInstruction?.from}{' '}
+                                <i className="fa-solid fa-arrow-right" />{' '}
+                                {key.commuteInstruction?.to}
+                              </div>
+                              <div className="cost-time">
+                                <div className="time">
+                                  <i className="fa-solid fa-clock" />{' '}
+                                  <span>{key.commuteInstruction?.time}</span>
                                 </div>
-                                <div className="cost-time">
-                                  <div className="time">
-                                    <i className="fa-solid fa-clock" />{' '}
-                                    <span>{commuteInstruction?.time}</span>
-                                  </div>
-                                  <div className="cost">
-                                    <i className="fa-solid fa-coins" />{' '}
-                                    <span>{commuteInstruction?.cost}</span>
-                                  </div>
+                                <div className="cost">
+                                  <i className="fa-solid fa-coins" />{' '}
+                                  <span>{key.commuteInstruction?.cost}</span>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        )
-                      )}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )
