@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@Utils": path.resolve(__dirname, "./src/Utils"),
+      '@Utils': path.resolve(__dirname, './src/Utils'),
     },
   },
 });
