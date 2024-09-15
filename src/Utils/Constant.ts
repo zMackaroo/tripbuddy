@@ -3,7 +3,6 @@ import { lazy } from 'react';
 
 const Header = lazy(() => import('@Components/Header/Header'));
 const Landing = lazy(() => import('@Components/Landing/Landing'));
-const Dashboard = lazy(() => import('@Components/Dashboard/Dashboard'));
 const Maintenance = lazy(() => import('@Components/Maintenance/Maintenance'));
 const TripPlanner = lazy(
   () => import('@Components/TripPlanner/TripPlannerWrapper')
@@ -72,7 +71,6 @@ const supportedCurrency: any = {
 export {
   Header,
   Landing,
-  Dashboard,
   Maintenance,
   TripPlanner,
   SelectDestination,
