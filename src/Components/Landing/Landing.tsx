@@ -21,7 +21,7 @@ function Landing() {
           Your personal trip planner and travel curator, creating custom
           itineraries tailored to your interests and budget.
         </p>
-        <Link to="/create">
+        <Link to="/trip-planner">
           <button className="get-started" type="button">
             Get Started. It's free.
           </button>

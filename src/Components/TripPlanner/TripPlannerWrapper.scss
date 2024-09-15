@@ -1,0 +1,329 @@
+.TripPlannerWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.trip__planner__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p-md);
+  border-bottom: 1.5px solid whitesmoke;
+  box-sizing: border-box;
+}
+
+.is__itinerary {
+  padding: var(--p-xl) !important;
+  margin-top: 1rem !important;
+}
+
+.trip__planner__content {
+  padding: 0rem var(--p-8xl);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  gap: var(--sp-xl);
+  box-sizing: border-box;
+
+  .progress {
+    width: 700px;
+  }
+
+  .headline {
+    color: var(--primary);
+    font-size: var(--text-3xl);
+    text-align: center;
+  }
+
+  .description {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    text-align: center;
+  }
+
+  .search-destination {
+    width: 600px;
+  }
+
+  .suggested__places__details {
+    display: flex;
+    gap: var(--sp-xl);
+    text-align: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+
+    &--place {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      & img {
+        width: 150px;
+        height: 100px;
+        border-radius: var(--br-md);
+      }
+    }
+
+    &--place:hover {
+      transform: var(--scale-sm);
+    }
+  }
+
+  .rdrDefinedRangesWrapper {
+    display: none;
+  }
+
+  .rdrDayToday .rdrDayNumber span:after {
+    background-color: var(--primary);
+  }
+
+  .selection__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-lg);
+
+    .selection__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 171px;
+      height: 96px;
+      border: 1px solid var(--primary);
+      padding: var(--p-md);
+      border-radius: var(--br-sm);
+      gap: var(--sp-md);
+      transition: 0.3s;
+
+      & i {
+        font-size: var(--text-xl);
+      }
+    }
+
+    .selection__item:hover {
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: var(--primary);
+      color: var(--default);
+
+      & i {
+        color: var(--default);
+      }
+    }
+  }
+
+  .itinerary__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-lg);
+    width: 100%;
+
+    .itinerary__details {
+      span {
+        width: 100% !important;
+      }
+
+      &--destination {
+        height: 400px;
+        width: 100%;
+        border-radius: var(--br-sm);
+      }
+    }
+  }
+
+  .itinerary__hotel__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-lg);
+
+    .itinerary__hotel__container {
+      flex: 0 1 285px;
+      min-height: 130px;
+      overflow: hidden;
+
+      span {
+        width: 100% !important;
+      }
+
+      .itinerary__hotel__image {
+        min-width: 100%;
+        width: 100%;
+        min-height: 150px;
+        max-height: 150px;
+        border-radius: var(--br-sm);
+      }
+
+      .itinerary__hotel__details {
+        display: flex;
+        flex-direction: column;
+        gap: var(--sp-sm);
+
+        &--address {
+          i {
+            color: var(--primary);
+          }
+        }
+
+        &--price {
+          font-weight: var(--font-semi-bold);
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .custom-timeline {
+    margin-left: 20px;
+
+    .rs-timeline-item-custom-dot {
+      .rs-icon {
+        position: absolute;
+        background: #fff;
+        top: 0;
+        left: -2px;
+        border: 2px solid var(--primary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 18px;
+        color: var(--primary);
+        margin-left: -13px;
+        justify-content: center;
+        padding: 8px;
+      }
+    }
+
+    .rs-timeline-item-content {
+      margin-left: 24px;
+    }
+
+    & .destination__image {
+      border-radius: var(--br-sm);
+      height: 100px;
+      width: 350px;
+    }
+  }
+
+  .rs-timeline-item-content p {
+    margin: 0;
+  }
+}
+
+.itinerary__timeline__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+  background-color: var(--secondary);
+  padding: var(--p-sm);
+  border-radius: var(--br-sm);
+}
+
+.itinerary__timeline__day__wrapper {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: 400px 1fr;
+  background-color: var(--secondary);
+  padding: var(--p-sm);
+  gap: var(--sp-lg);
+  border-radius: var(--br-sm);
+  span {
+    width: 100% !important
+  }
+
+  .itinerary__timeline__day__image {
+    width: 400px;
+    min-height: 200px;
+    height: 200px;
+    border-radius: var(--br-sm);
+
+ 
+  }
+
+  .itinerary__timeline__day__details__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+  }
+
+  .itinerary__timeline__day__details {
+    display: flex;
+    flex-direction: column;
+
+    &--time {
+      font-size: var(--text-lg);
+      color: #000000;
+      font-weight: var(--font-bold);
+    }
+
+    &--title {
+      color: var(--primary);
+      font-weight: var(--font-bold);
+      font-size: var(--text-lg);
+    }
+  }
+
+  .itinerary__timeline__day__details__commute {
+    &--destination {
+      color: var(--primary);
+      font-weight: var(--font-bold);
+      font-size: var(--text-lg);
+    }
+  }
+}
+
+.trip__planner__footer {
+  border-top: 1.5px solid whitesmoke;
+  background-color: #fff;
+  padding: 0.875rem 2.875rem 0.875rem 2.875rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  .btn {
+    border: unset;
+    padding: var(--p-sm) var(--p-md);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    border-radius: var(--br-sm);
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: var(--text-lg);
+    color: #fff;
+  }
+
+  .btn-next {
+    background-color: var(--primary);
+  }
+
+  .btn-next:disabled {
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .btn-next:hover:not([disabled]) {
+    color: #fff;
+    background-color: red;
+  }
+
+  .btn-back {
+    background-color: #fff;
+    color: black !important;
+  }
+
+  .btn-back:hover {
+    background-color: whitesmoke;
+  }
+}

@@ -29,8 +29,28 @@
 
   // Colors
   --primary: rgb(245 101 81 / 1);
-  --secondary: #e7e8d1;
-  --default: #a7beae;
+  --secondary: #f5f5f5;
+  --default: #ffff;
+
+  // Padding
+  --p-sm: 0.5rem;
+  --p-md: 1rem;
+  --p-lg: 1.5rem;
+  --p-xl: 2rem;
+  --p-8xl: 8rem;
+
+  // Border Radius
+  --br-sm: 0.5rem;
+  --br-md: 1rem;
+
+  // Spacing
+  --sp-sm: 0.5rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.5rem;
+  --sp-xl: 2rem;
+
+  // Transform
+  --scale-sm: scale(1.1);
 }
 
 body {
@@ -94,7 +114,34 @@ option {
   padding: 25px;
 }
 
-@media screen and (max-width: 768px) {
+div {
+  box-sizing: border-box;
+}
+
+@media all and (min-width: 769px) and (max-width: 1279px) {
+  .trip__planner__content .suggested-places {
+    gap: 0.425rem !important;
+    justify-content: center !important;
+  }
+
+  .linear-progress {
+    width: 80% !important;
+  }
+
+  .itinerary__hotel__container {
+    flex: 0 1 48% !important;
+  }
+
+  .itinerary__timeline__day__wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .itinerary__timeline__day__image {
+    width: 100% !important;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
   .landing__wrapper,
   .dashboard__wrapper {
     margin-left: 2rem !important;
@@ -126,7 +173,8 @@ option {
   .trip__card {
     flex-direction: column !important;
 
-    & .image, .details {
+    & .image,
+    .details {
       width: 100% !important;
     }
   }
@@ -135,30 +183,117 @@ option {
     flex-direction: column !important;
     gap: 1rem !important;
   }
+
+  .trip__planner__content {
+    padding: 0rem !important;
+  }
+
+  .trip__planner__content .suggested-places {
+    gap: 0.425rem !important;
+  }
+
+  .suggested-places {
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: auto !important;
+    gap: 1rem !important;
+
+    .place {
+      & img {
+        width: 150px !important;
+      }
+    }
+  }
+
+  .headline {
+    font-size: var(--text-xl) !important;
+  }
+
+  .progress {
+    width: 500px !important;
+  }
+
+
+
+
+
+
+
+
+
+  .itinerary__hotel__container {
+    flex: 0 1 100% !important;
+  }
+
+  .itinerary__timeline__day__wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .itinerary__timeline__day__image {
+    width: 100% !important;
+  }
 }
 
-@media screen and (max-width: 596px) {
-  .image,
-  .hotel__card .name-address {
+@media screen and (max-width: 480px) {
+
+  .TripPlannerWrapper {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+
+  .trip__planner__content {
+    padding: 0rem !important;
+  }
+
+  .search-destination {
     width: 100% !important;
   }
 
-  .hotel__card .name-address {
-    height: 300px !important;
-    min-height: unset !important;
-    max-height: unset !important;
-    gap: 0.575rem !important;
+  .suggested-places {
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: auto !important;
+    gap: 1rem !important;
+
+    .place {
+      & img {
+        width: 150px !important;
+      }
+    }
   }
 
-  .hotel__card {
-    padding: 24px !important;
+  .headline {
+    font-size: var(--text-xl) !important;
   }
 
-  .hotel__card .name-address .description {
-    display: unset !important;
-    text-overflow: unset !important;
-    -webkit-box-orient: unset !important;
-    -webkit-line-clamp: unset !important;
-    overflow: scroll !important;
+  .trip__planner__header, .trip__planner__footer {
+    padding: 0.875rem !important;
+  }
+
+  .trip__planner__content {
+    margin-top: 4rem !important;
+  }
+
+  .progress {
+    width: 400px !important;
+  }
+  
+  .rdrMonths {
+    flex-direction: column !important;
+  }
+
+  .is__itinerary {
+    padding: var(--p-sm) !important;
+  }
+
+  .itinerary__hotel__container {
+    flex: 0 1 100% !important;
+  }
+
+  .itinerary__timeline__day__wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .itinerary__timeline__day__image {
+    width: 100% !important;
   }
 }
