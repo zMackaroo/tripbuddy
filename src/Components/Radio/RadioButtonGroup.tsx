@@ -22,6 +22,7 @@ function RadioButtonGroup({ name, className, options }: IRadioButtonGroup) {
     <div className={className}>
       {options.map(({ icon, title, itemClassName, activeClassName }) => (
         <div
+          key={title}
           className={`${itemClassName || 'selection__item'} ${
             activeItem === title ? activeClassName || 'active' : ''
           }`}

@@ -22,10 +22,7 @@ function Hotels({ hotelName, hotelAddress, price, rating }: IHotel) {
   }, []);
 
   return (
-    <div
-      key={`${hotelName}__${rating}`}
-      className="itinerary__hotel__container"
-    >
+    <div className="itinerary__hotel__container">
       <LazyLoadImage
         className="itinerary__hotel__image"
         src={destinationImage}
@@ -136,6 +133,7 @@ function Itineraries({ itinerary }: IItinerary) {
               commuteInstruction,
             }) => (
               <TimelinePlaces
+                key={placeName}
                 placeAddress={placeAddress}
                 placeDetails={placeDetails}
                 placeName={placeName}
@@ -171,8 +169,9 @@ function Itinerary() {
       </div>
       <h1>Hotels in {geminiParamsConfig.destination}</h1>
       <div className="itinerary__hotel__wrapper">
-        {hotels.map(({ hotelName, hotelAddress, price, rating }) => (
+        {hotels.map(({ hotelName, hotelAddress, price, rating }, index) => (
           <Hotels
+            key={`${hotelName} - ${rating} - ${price} - ${index}`}
             hotelName={hotelName}
             hotelAddress={hotelAddress}
             price={price}
