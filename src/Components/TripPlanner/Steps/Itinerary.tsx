@@ -157,8 +157,6 @@ function Itinerary() {
     getPlaces(geminiParamsConfig.destination);
   }, []);
 
-  console.log(geminiGenerativeResult, 'a', 'b');
-
   return (
     <div className="itinerary__wrapper">
       <div className="itinerary__details">

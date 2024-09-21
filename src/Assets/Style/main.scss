@@ -192,19 +192,6 @@ div {
     gap: 0.425rem !important;
   }
 
-  .suggested-places {
-    justify-content: center !important;
-    align-items: center !important;
-    overflow: auto !important;
-    gap: 1rem !important;
-
-    .place {
-      & img {
-        width: 150px !important;
-      }
-    }
-  }
-
   .headline {
     font-size: var(--text-xl) !important;
   }
@@ -218,8 +205,22 @@ div {
 
 
 
+  .search-destination {
+    width: 90% !important;
+  }
 
+  .suggested__places__details {
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: auto !important;
+    gap: 1rem !important;
 
+    .place {
+      & img {
+        width: 150px !important;
+      }
+    }
+  }
 
   .itinerary__hotel__container {
     flex: 0 1 100% !important;
@@ -248,7 +249,7 @@ div {
     width: 100% !important;
   }
 
-  .suggested-places {
+  .suggested__places__details {
     justify-content: center !important;
     align-items: center !important;
     overflow: auto !important;

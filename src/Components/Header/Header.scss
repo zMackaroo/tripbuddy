@@ -2,6 +2,7 @@
   padding: 1.25rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e4ebe7;
   background-color: #ffffff;
 }
@@ -9,6 +10,7 @@
 .button__wrapper {
   display: flex;
   gap: 0.75rem;
+  height: 50px;
 }
 
 .btn {
@@ -35,7 +37,7 @@
 }
 
 .btn:hover {
-  background-color: #aa3424;
+  background-color: var(--primary);
   color: white;
 }
 

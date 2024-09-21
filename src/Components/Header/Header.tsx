@@ -9,10 +9,10 @@ function Header() {
       <Link to="/">
         <img className="logo" title="logo" src={Logo} />
       </Link>
-      {/* <div className="button__wrapper">
+      <div className="button__wrapper">
         <button className="btn signin">Sign in</button>
         <button className="btn signup">Sign up</button>
-      </div> */}
+      </div>
     </header>
   );
 }
